@@ -1,6 +1,6 @@
 {
   "name": "open-git-remote",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI that opens git remote URLs in the browser",
   "type": "module",
   "main": "out/index.js",
@@ -9,8 +9,8 @@
     "prepare": "tsc"
   },
   "repository": {
-      "type": "git",
-      "url": "https://github.com/rdsq/open-git-remote-cli"
+    "type": "git",
+    "url": "https://github.com/rdsq/open-git-remote-cli"
   },
   "keywords": [
     "cli",
@@ -24,7 +24,6 @@
   },
   "bin": "./out/index.js",
   "dependencies": {
-    "@inquirer/select": "^4.0.1",
-    "@rdsq/open": "npm:@jsr/rdsq__open@^1.0.1"
+    "@inquirer/select": "^4.0.1"
   }
 }

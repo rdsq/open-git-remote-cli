@@ -5,7 +5,7 @@ import * as process from 'node:process';
 import * as fs from 'node:fs/promises';
 import path from 'node:path';
 import getRemotes from './get-remotes.js';
-import open from '@rdsq/open';
+import open from './open/mod.js';
 import select from '@inquirer/select';
 import checkDir from './check-dir.js';
 
