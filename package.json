@@ -2,6 +2,7 @@
   "name": "open-git-remote",
   "version": "1.0.0",
   "description": "Open git remote URLs in the browser",
+  "type": "module",
   "main": "out/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +15,6 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.6.3"
-  }
+  },
+  "bin": "./out/index.js"
 }
