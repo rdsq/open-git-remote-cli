@@ -7,6 +7,7 @@ import path from 'node:path';
 import getRemotes from './get-remotes.js';
 import open from '@rdsq/open';
 import select from '@inquirer/select';
+import checkDir from './check-dir.js';
 
 const argv = process.argv.slice(2);
 
@@ -31,11 +32,10 @@ if (parsed.path) {
     target = path.join(target, parsed.path);
 }
 
-const remotes = await getRemotes(target);
+await checkDir(target);
+// check if it is a dir and git repo
 
-if (remotes === null) {
-    process.exit(1);
-}
+const remotes = await getRemotes(target);
 
 if (parsed.remote) {
     if (!(parsed.remote in remotes)) {
