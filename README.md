@@ -15,6 +15,7 @@ Or from source
 ```sh
 git clone https://github.com/rdsq/open-git-remote-cli.git
 cd open-git-remote-cli
+npm i
 npm i . -g
 ```
 
