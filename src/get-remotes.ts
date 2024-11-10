@@ -1,6 +1,6 @@
 import { execSync } from 'node:child_process';
 
-const regex = /^\S+ +\S+/;
+const regex = /^(\S+)\s+(\S+)/;
 
 export default async function getRemotes(repo: string): Promise<{
     [key: string]: string;
