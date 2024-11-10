@@ -37,6 +37,11 @@ await checkDir(target);
 
 const remotes = await getRemotes(target);
 
+if (Object.keys(remotes).length === 0) {
+    console.error('This repository has no remotes');
+    process.exit(1);
+}
+
 if (parsed.remote) {
     if (!(parsed.remote in remotes)) {
         const available = Object.keys(remotes).join(', ');
