@@ -70,9 +70,14 @@ for (const [name, url] of Object.entries(remotes)) {
     });
 }
 
+choices.push({
+    name: 'Cancel',
+    value: null,
+});
+
 const choice = await select({
     message: 'Pick the remote to open',
     choices,
-}) as string;
+}) as string | null;
 
-await open(choice);
+if (choice) await open(choice);
