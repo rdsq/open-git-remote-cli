@@ -45,11 +45,13 @@ if (parsed.remote) {
         process.exit(1);
     }
     await open(remotes[parsed.remote]);
+    process.exit(0);
 }
 
 if (Object.keys(remotes).length === 1) {
     const url = Object.values(remotes)[0];
     await open(url);
+    process.exit(0);
 }
 
 // multiple remotes
