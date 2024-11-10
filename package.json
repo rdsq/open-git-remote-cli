@@ -3,7 +3,6 @@
   "version": "1.0.1",
   "description": "CLI that opens git remote URLs in the browser",
   "type": "module",
-  "main": "out/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "tsc"
@@ -16,13 +15,15 @@
     "cli",
     "git"
   ],
-  "author": "",
+  "author": "rdsq",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.9.0",
     "typescript": "^5.6.3"
   },
-  "bin": "./out/index.js",
+  "bin": {
+      "open-git-remote": "./out/index.js"
+  },
   "dependencies": {
     "@inquirer/select": "^4.0.1"
   }

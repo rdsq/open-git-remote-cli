@@ -1,4 +1,4 @@
-#!/usr/bin/enc node
+#!/usr/bin/env node
 import cliParser from './cli.js';
 import helpMessage from './help.js';
 import * as process from 'node:process';
