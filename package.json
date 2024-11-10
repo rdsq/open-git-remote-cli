@@ -17,5 +17,8 @@
     "@types/node": "^22.9.0",
     "typescript": "^5.6.3"
   },
-  "bin": "./out/index.js"
+  "bin": "./out/index.js",
+  "dependencies": {
+    "@rdsq/open": "npm:@jsr/rdsq__open@^1.0.1"
+  }
 }
