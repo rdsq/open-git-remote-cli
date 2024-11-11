@@ -19,6 +19,12 @@ npm i
 npm i . -g
 ```
 
+Or with no installation at all
+
+```sh
+npx open-git-remote
+```
+
 ## Usage
 
 Open the current repo remote
