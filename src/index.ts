@@ -7,6 +7,7 @@ import path from 'node:path';
 import getRemotes from './get-remotes.js';
 import open from './open/mod.js';
 import select from '@inquirer/select';
+import { ExitPromptError } from '@inquirer/core';
 import checkDir from './check-dir.js';
 
 const argv = process.argv.slice(2);
@@ -70,14 +71,14 @@ for (const [name, url] of Object.entries(remotes)) {
     });
 }
 
-choices.push({
-    name: 'Cancel',
-    value: null,
-});
-
-const choice = await select({
-    message: 'Pick the remote to open',
-    choices,
-}) as string | null;
-
-if (choice) await open(choice);
+try {
+    const choice = await select({
+        message: 'Pick the remote to open',
+        choices,
+    }) as string;
+    await open(choice);
+} catch (err) {
+    if (err instanceof ExitPromptError) {
+        process.exit(0);
+    } else throw err;
+}
