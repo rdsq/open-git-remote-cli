@@ -1,6 +1,6 @@
 {
   "name": "open-git-remote",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CLI that opens git remote URLs in the browser",
   "type": "module",
   "scripts": {
