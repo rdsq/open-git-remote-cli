@@ -44,3 +44,5 @@ Open specific remote
 ```sh
 open-git-remote . origin
 ```
+
+Also check out the [`open-git-remote`](https://github.com/rdsq/open-git-remote-vscode) VS Code Extension
